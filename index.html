@@ -3,11 +3,15 @@
 <meta charset="utf-8">
 
 
-<title>Assignment 2</title>
+<title>Assignment 7</title>
 <link rel="stylesheet" href="mystyle.css">
 </head>
 
 <body style="background-color:gold">
+
+
+<script src="script.js" defer> </script>
+<noscript>Please enable javascript!</noscript>
 
 
 <!-- NAVIGATION BUTTONS-->
@@ -15,32 +19,47 @@
   
   <ul>
     
-    <li><a href="#home">Home</a></li>
-    <li><a href="#attractions">Attractions</a></li>
-    <li><a href="#resorts">Resorts</a></li>
-    <li><a href="#restaurants">Restaurants</a></li>
-    <li><a href="#schools">Schools</a></li>
-    <li><a href="#history">History</a></li>
-    <li><a href="#websites">Relevant Websites</a></li>
+    <li><a href="#home" id="homeb">Home</a></li>
+    <li><a href="#attractions" id="attractionsb">Attractions</a></li>
+    <li><a href="#resorts" id="resortsb">Resorts</a></li>
+    <li><a href="#restaurants" id="restaurantsb">Restaurants</a></li>
+    <li><a href="#schools" id="schoolsb">Schools</a></li>
+    <li><a href="#history" id="historyb">History</a></li>
+    <li><a href="#websites" id="websitesb">Relevant Websites</a></li>
   </ul>
 
   <!--GIANT PHOENIX PICTURE-->
+
 <div id="home">
+
+  <!--SRC IS ONLY THERE AS BACKUP, AND BECAUSE HTML REQUIRES ONE TO BE THERE EVEN THOUGH JS HANDLES IT-->
+  <img id = "slide"  src="https://www.tripsavvy.com/thmb/NbvbJR3hkmwQFpxvMUJsDBsYZ_k=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1138165502-1daa3ff05ff54d2dadb274ae52c27f14.jpg" alt="Background photos of Phoenix, Arizona">
+  <h1 id = "welcometext">Welcome to Phoenix, Arizona!</h1>
   
-<h1>Welcome to Phoenix, Arizona</h1>
-<h2><br>"<em>Ditat Deus</em>", latin for "God enriches" (Arizona State Motto)<br><br></h2>
-    
+  <h2><br>"<em>Ditat Deus</em>", latin for "God enriches" -Arizona State Motto<br><br></h2>
+
+   
 </div>
+
+
+<!--THANKS TO https://weatherwidget.io/-->
+<a class="weatherwidget-io" href="https://forecast7.com/en/33d45n112d07/phoenix/" data-label_1="PHOENIX" data-label_2="WEATHER" data-theme="dark" data-basecolor="#d70f0f" >PHOENIX WEATHER</a>
+
 
 <!--   LOCAL ATTRACTIONS   -->
 
-<h2 id="attractions">Local Attractions</h2>
-
+<h2 id="attractions" class="bordered-header"
+  onmouseover="this.style.color = '#d70f0f';this.style.fontStyle='bold';this.style.fontSize='3em';"
+  onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='2em';">
+  Local Attractions
+</h2>
 
 
 <div style="width: 100%;overflow:auto;height:fit-content">
-    <div style="float:left; width: 50%;">
-        <h2 style="text-align:center;">McCormick-Stillman Railroad Park</h2>
+    <div class="leftthing" 
+    onmouseover="this.style.color = 'rgb(230,30,100)';this.style.fontStyle='bold';this.style.fontSize='1.5em';" 
+    onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='1em';">
+        <h2 style="text-align:center;" > McCormick-Stillman Railroad Park</h2>
         
         <img src="https://th.bing.com/th/id/OIP.PrYy6p0Yv-koD7Adl_HrEQHaE8?pid=ImgDet&rs=1" alt="Picture of customers enjoying their time on a train" width=700 height=500>
       
@@ -68,7 +87,9 @@
       </table>
   </div>
 
-  <div style="float:right;width: 50%">
+  <div class="rightthing" 
+  onmouseover="this.style.color = 'rgb(230,30,100)';this.style.fontStyle='bold';this.style.fontSize='1.5em';" 
+  onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='1em';">
         <h2 style="text-align:center;">Musical Instrument Museum</h2>
         
         <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/55/79/d3/thumb-piano-exhibit.jpg?w=1200&h=-1&s=1" alt="Picture of some people enjoying the museum" width=700 height=500>
@@ -101,7 +122,8 @@
 <p><br><br></p>
 
 <div style="width: 100%;overflow:auto;height:fit-content">
-  <div style="float:left; width: 50%">
+  <div class="leftthing"
+  onmouseover="this.style.color = 'rgb(230,30,100)';this.style.fontStyle='bold';this.style.fontSize='1.5em';" onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='1em';">
     <h2 style="text-align:center;">Papago Park</h2>
     
     <img src="https://d3qvqlc701gzhm.cloudfront.net/full/45a55d7629988a91a0d2302267c22f46f9efb23f26d193aa39884dff0fcf0a29.jpg" alt="Picture of Papago Park" width=700 height=500>
@@ -129,7 +151,10 @@
   </table>
   </div>
 
-  <div style="float:right;width: 50%">
+  <div class="rightthing"
+  onmouseover="this.style.color = 'rgb(230,30,100)';this.style.fontStyle='bold';this.style.fontSize='1.5em';"
+    onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='1em';">
+    
     <h2 style="text-align:center;">Phoenix Zoo</h2>
     
     <img src="https://th.bing.com/th/id/R.b577ca9ab501fcbca86930f2c283ed04?rik=uNTZk%2fRCqAQDug&pid=ImgRaw&r=0" alt="Picture of the Phoenix Zoo" width=700 height=500>
@@ -159,12 +184,83 @@
 
 </div>
 
-
-  <!--        LOCAL RESORTS          -->
-<h2 id="resorts">Local Resorts</h2>
+<p><br><br></p>
 
 <div style="width: 100%;overflow:auto;height:fit-content">
-  <div style="float:left; width: 50%">
+  <div class="leftthing"
+  onmouseover="this.style.color = 'rgb(230,30,100)';this.style.fontStyle='bold';this.style.fontSize='1.5em';" 
+    onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='1em';">
+    <h2 style="text-align:center;">Desert Botanical Garden</h2>
+    
+    <img src="https://myflyingleap.com/wp-content/uploads/2021/07/Desert-Botanical-Garden_from-DBG.jpg" alt="Picture of the garden" width=700 height=500>
+  
+ 
+  <table style="width:80%;">
+    <tr>
+      <td>
+        When you think of the desert, chances are you think of sand and shades of brown. The Desert Botanical Garden is there to debunk the myth that there is little or no green in the desert. It’s a 140-acre botanical garden with more than 50 thousand plants.
+      </td>
+      </tr>
+  </table>
+  <table style="width:90%">
+    <tr>
+      <th>Website</th>
+      <th>Hours</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td><a href="https://dbg.org/">Desert Botanical Garden</a></td>
+      <td>8:00 AM to 8:00 PM</td>
+      <td>$29.95 per person</td>
+    </tr>
+    
+  </table>
+  </div>
+
+  <div class="rightthing"
+  onmouseover="this.style.color = 'rgb(230,30,100)';this.style.fontStyle='bold';this.style.fontSize='1.5em';" 
+    onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='1em';">
+    <h2 style="text-align:center;">Dobbins Lookout South Mountain</h2>
+    
+    <img src="https://myflyingleap.com/wp-content/uploads/2019/12/Dobbins-Lookout.jpg" alt="Picture at the lookout" width=700 height=500>
+    
+   
+    <table style="width:80%;">
+      <tr>
+        <td>
+          This scenic observation point offers the best views of the Phoenix area. It is the highest point you can drive to, with an elevation of over 2,000 feet. It is located in South Mountain Park and Preserve, which is one of the largest municipal parks in the country.
+        </td>
+        </tr>
+    </table>
+    <table style="width:90%">
+      <tr>
+        <th>Website</th>
+        <th>Hours</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td><a href="https://www.phoenix.gov/parks/trails/locations/south-mountain">Park Website</a></td>
+        <td>5:00 AM to 7:00 PM</td>
+        <td>$0</td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>
+
+
+
+  <!--        LOCAL RESORTS          -->
+<h2 id="resorts" class="bordered-header"
+onmouseover="this.style.color = '#d70f0f';this.style.fontStyle='bold';this.style.fontSize='3em';"
+  onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='2em';"
+  >Local Resorts</h2>
+
+<div style="width: 100%;overflow:auto;height:fit-content">
+  <div class="leftthing"
+  onmouseover="this.style.color = 'rgb(230,30,100)';this.style.fontStyle='bold';this.style.fontSize='1.5em';" 
+    onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='1em';">
     <h2 style="text-align:center;">Four Seasons Scottsdale at Troon North</h2>
     
     <img src="https://www.planetware.com/photos-large/USAZ/arizona-phoenix-resorts-four-seasons-troon-north-pool.jpg" alt="Picture of Four Seasons Scottsdale at Troon North" width=700 height=500>
@@ -193,7 +289,9 @@
   </table>
   </div>
 
-  <div style="float:right;width: 50%">
+  <div class="rightthing"
+  onmouseover="this.style.color = 'rgb(230,30,100)';this.style.fontStyle='bold';this.style.fontSize='1.5em';"
+  onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='1em';">
     <h2 style="text-align:center;">The Phoenician</h2>
     
     <img src="https://www.planetware.com/photos-large/USAZ/arizona-phoenix-resorts-the-phoenician-from-balcony.jpg" alt="Picture of the Phoenician" width=700 height=500>
@@ -224,10 +322,15 @@
 </div>
 
 <!-- LOCAL RESTAURANTS-->
-<h2 id="restaurants">Local Restaurants</h2>
+<h2 id="restaurants" class="bordered-header"
+onmouseover="this.style.color = '#d70f0f';this.style.fontStyle='bold';this.style.fontSize='3em';"
+  onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='2em';">
+  Local Restaurants</h2>
     
 <div style="width: 100%;overflow:auto;height:fit-content">
-  <div style="float:left; width: 50%">
+  <div class="leftthing"
+  onmouseover="this.style.color = 'rgb(230,30,100)';this.style.fontStyle='bold';this.style.fontSize='1.5em';"
+    onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='1em';">
     <h2 style="text-align:center;">Ajo Al's Mexican Cafe</h2>
     
     <img src="https://360niche.com/wp-content/uploads/2019/09/aa-camelback3.jpg" alt="Picture of inside Ajo Al's" width=700 height=500>
@@ -248,14 +351,16 @@
     </tr>
     <tr>
       <td><a href="https://ajoals.com/">Ajo Al's</a></td>
-      <td style = "text-align:center">10:00 AM to 6:00 PM</td>
-      <td style="text-align:right">5101 N 16th St, Phoenix, AZ 85016</td>
+      <td>10:00 AM to 6:00 PM</td>
+      <td>5101 N 16th St, Phoenix, AZ 85016</td>
     </tr>
     
   </table>
   </div>
 
-  <div style="float:right;width: 50%">
+  <div class="rightthing"
+  onmouseover="this.style.color = 'rgb(230,30,100)';this.style.fontStyle='bold';this.style.fontSize='1.5em';"
+    onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='1em';">
     <h2 style="text-align:center;">Rusconi's American Kitchen</h2>
     
     <img src="https://i.pinimg.com/originals/26/23/65/2623654b7c2d6cb919d26465c1d3024e.jpg" alt="Picture inside Rusconi's" width=700 height=500>
@@ -276,8 +381,8 @@
       </tr>
       <tr>
         <td><a href="https://rusconiskitchen.com/">Rusconi's Kitchen</a></td>
-        <td style = "text-align:center">4PM-9PM (Wed-Sun)</td>
-        <td style="text-align:right">10637 N Tatum Blvd, Phoenix, AZ 85028</td>
+        <td>4PM-9PM (Wed-Sun)</td>
+        <td>10637 N Tatum Blvd, Phoenix, AZ 85028</td>
       </tr>
       
     </table>
@@ -285,14 +390,22 @@
 
 </div>
 
+<h3>Phoenix aint home to just these two, there are many other restaurants and fast food chains.</h3>
+
 <!-- LOCAL SCHOOLS-->
-<h2 id="schools">Local Schools</h2>
+<h2 id="schools" class="bordered-header"
+onmouseover="this.style.color = '#d70f0f';this.style.fontStyle='bold';this.style.fontSize='3em';"
+  onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='2em';"
+  >Local Schools</h2>
+
 <h2 style="text-align: center; padding: 20px;">Phoenix is home to <em>325</em> public schools in <em>30</em> school districts along with more than <em>200</em> charter and public schools.
   <br><br> 
   Here are the district maps for local Elementary, and High Schools
 </h2>
 <div style="width: 100%;overflow:auto;height:fit-content">
-  <div style="float:left; width: 50%">
+  <div class="leftthing"
+  onmouseover="this.style.color = 'rgb(230,30,100)';this.style.fontStyle='bold';this.style.fontSize='1.5em';"
+    onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='1em';">
     <h2 style="text-align:center; font-family:'Lucida Sans';">Elementary School Districts for Phoenix</h2>
     
     <img src="elemphoenix.PNG" alt="Picture of Elementary school map for Phoenix" width=600 height=700>
@@ -301,7 +414,9 @@
   
   </div>
 
-  <div style="float:right;width: 50%">
+  <div class="rightthing"
+  onmouseover="this.style.color = 'rgb(230,30,100)';this.style.fontStyle='bold';this.style.fontSize='1.5em';"
+    onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='1em';">
     <h2 style="text-align:center; font-family:'Lucida Sans';">High School Districts for Phoenix</h2>
     
     <img src="hsphoenix.PNG" alt="Picture of high school map for Phoenix" width=600 height=700>
@@ -314,7 +429,10 @@
 
 
 <!-- LOCAL HISTORY  -->
-<h2 id="history">Local History</h2>
+<h2 id="history" class="bordered-header"
+onmouseover="this.style.color = '#d70f0f';this.style.fontStyle='bold';this.style.fontSize='3em';"
+  onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='2em';"
+  >Local History</h2>
 
   <img src="https://i.redd.it/sx1puyadcw901.jpg" alt="Phoenix, Arizona Flag" width=600 height=300>
  
@@ -345,7 +463,10 @@
 
 
 <!-- RELEVANT WEBSITES  -->
-<h2 id="websites"><span class="font-stretch">Relevant Websites</span></h2>
+<h2 id="websites" class="bordered-header"
+onmouseover="this.style.color = '#d70f0f';this.style.fontStyle='bold';this.style.fontSize='3em';"
+  onmouseout="this.style.color='black';this.style.fontStyle='normal';this.style.fontSize='2em';"
+  >Relevant Websites</h2>
     <p><br><br></p>
 
  <a style="padding: 30px; font-size:20px" href="https://www.phoenix.gov/" target="_blank">Phoenix Government Website</a>
@@ -357,7 +478,7 @@
   
 
  <p>
-   <br><br><br><br>
+   <br><br><br>
    Built and Designed by Preston Leigh | University of Wisconsin-Stout | Jan 2022
    <br>
  </p>
